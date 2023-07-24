@@ -14,6 +14,7 @@ import { useUser } from "@/hooks/useUser";
 import usePlayer from "@/hooks/usePlayer";
 
 import Button from "./Button";
+import Image from 'next/image';
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -46,14 +47,14 @@ const Header: React.FC<HeaderProps> = ({
       className={twMerge(`
         h-fit 
         bg-gradient-to-b 
-        from-emerald-800 
+        from-purple-800 
         p-6
         `,
         className
       )}
     >
       <div className="w-full mb-4 flex items-center justify-between">
-        <img src="/images/logo.png" alt="Logo" width={180} height={180} />
+      <Image src="/images/logo.png" alt="Logo" width={180} height={180} />
         <div className="hidden md:flex gap-x-2 items-center">
           <button 
             onClick={() => router.back()} 
